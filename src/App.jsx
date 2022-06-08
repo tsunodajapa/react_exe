@@ -3,7 +3,7 @@ import SideBar from './components/SideBar';
 
 const App = () => {
   return (
-    <div id="wrapper">
+    <div id='wrapper'>
       <SideBar />
       <ContentWrapper />
     </div>

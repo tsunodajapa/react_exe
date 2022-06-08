@@ -4,8 +4,8 @@ import TopBar from './TopBar';
 
 const ContentWrapper = () => {
   return (
-    <div id="content-wrapper" className="d-flex flex-column">
-      <div id="content">
+    <div id='content-wrapper' className='d-flex flex-column'>
+      <div id='content'>
         <TopBar />
         <ContentRowTop />
       </div>

@@ -1,25 +1,25 @@
-import Card from "./Card";
+import Card from './Card';
 
 const ContentRowMovies = () => {
   return (
-    <div class="row">
+    <div class='row'>
       <Card
-        title="Movies in Data Base"
+        title='Movies in Data Base'
         cuantity={21}
-        icon="fa-film"
-        color="primary"
+        icon='fa-film'
+        color='primary'
       />
       <Card
-        title="Total awards"
+        title='Total awards'
         cuantity={79}
-        icon="fa-award"
-        color="success"
+        icon='fa-award'
+        color='success'
       />
       <Card
-        title="Actors quantity"
+        title='Actors quantity'
         cuantity={49}
-        icon="fa-user"
-        color="warning"
+        icon='fa-user'
+        color='warning'
       />
     </div>
   )
