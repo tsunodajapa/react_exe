@@ -1,26 +1,34 @@
 import Card from './Card';
 
+const cardsDash = [
+  {
+    title: 'Movies in Data Base',
+    cuantity: 21,
+    icon: 'fa-film',
+    color: 'primary'
+  },
+  {
+    title: 'Total awards',
+    cuantity: 79,
+    icon: 'fa-film',
+    color: 'success'
+  },
+  {
+    title: 'Actors quantity',
+    cuantity: 49,
+    icon: 'fa-award',
+    color: 'warning'
+  },
+];
+
 const ContentRowMovies = () => {
   return (
-    <div class='row'>
-      <Card
-        title='Movies in Data Base'
-        cuantity={21}
-        icon='fa-film'
-        color='primary'
-      />
-      <Card
-        title='Total awards'
-        cuantity={79}
-        icon='fa-award'
-        color='success'
-      />
-      <Card
-        title='Actors quantity'
-        cuantity={49}
-        icon='fa-user'
-        color='warning'
-      />
+    <div className='row'>
+      {
+        cardsDash.map((card, index) => {
+          return <Card {...card} key={`card-movies-${index}`} />
+        })
+      }
     </div>
   )
 }
