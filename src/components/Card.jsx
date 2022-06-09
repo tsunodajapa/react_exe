@@ -1,4 +1,11 @@
-const Card = ({ cuantity, title, icon, color }) => {
+import PropTypes from 'prop-types';
+
+const Card = ({
+  cuantity = 0,
+  title = 'No Title',
+  icon = 'fa-clipboard-list',
+  color = 'success'
+}) => {
   return (
     <div className='col-md-4 mb-4'>
       <div className={`card border-left-${color} shadow h-100 py-2`}>
@@ -18,6 +25,24 @@ const Card = ({ cuantity, title, icon, color }) => {
       </div>
     </div>
   )
+}
+
+// Card.defaultProps = {
+//   title: 'No Title',
+//   cuantity: 0,
+//   icon: 'fa-clipboard-list',
+//   color: 'success'
+// }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  // cuantity: PropTypes.number.isRequired
+  cuantity: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]).isRequired
 }
 
 export default Card;
