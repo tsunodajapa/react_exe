@@ -1,4 +1,5 @@
 
+import Chart from './Chart';
 import ContentRowMovies from './ContentRowMovies';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
@@ -16,6 +17,7 @@ const ContentRowTop = () => {
         <LastMovieInDb />
         <GenresInDb />
       </div>
+      <Chart />
     </div>
   )
 }
