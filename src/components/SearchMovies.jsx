@@ -1,16 +1,19 @@
+import { useEffect, useState } from 'react';
+import omdbApiService from '../services/omdbApiService';
+
 const SearchMovies = () => {
-  const movies = [
-    {
-      "Title": "Parchís",
-      "Year": "1983",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYTgxNjg2MTAtYjhmYS00NjQwLTk1YTMtNmZmOTMyNTAwZWUwXkEyXkFqcGdeQXVyMTY5MDE5NA@@._V1_SX300.jpg"
-    },
-    {
-      "Title": "Brigada en acción",
-      "Year": "1977",
-      "Poster": "N/A"
-    },
-  ];
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    omdbApiService.get('/', {
+      params: {
+        s: 'avengers',
+        apiKey: 'e24ea09d'
+      }
+    }).then((response) => {
+      console.log(response)
+    })
+  }, [])
 
   const keyword = 'PELÍCULA DEMO';
 
