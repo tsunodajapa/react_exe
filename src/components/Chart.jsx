@@ -1,3 +1,21 @@
+import ChartRow from "./ChartRow";
+
+const tableRowsData = [
+  {
+    title: 'Billy Elliot ',
+    length: '123',
+    rating: '5',
+    categories: ['Drama', 'Comedia'],
+    awards: 2
+  },
+  {
+    title: 'Alicia en el país de las maravillas',
+    length: '142',
+    rating: '4.8',
+    categories: ['Drama', 'Acción', 'Comedia'],
+    awards: 3
+  },
+];
 
 const Chart = () => {
   return (
@@ -23,7 +41,11 @@ const Chart = () => {
                 <th>Premios</th>
               </tr>
             </tfoot>
-            <tbody></tbody>
+            <tbody>
+              {tableRowsData.map((row, index) =>
+                <ChartRow {...row} key={`table-row-${index}`} />
+              )}
+            </tbody>
           </table>
         </div>
       </div>

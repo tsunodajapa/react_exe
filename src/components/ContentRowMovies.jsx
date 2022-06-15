@@ -18,13 +18,7 @@ const cardsDash = [
     cuantity: 49,
     icon: 'fa-award',
     color: 'warning'
-  },
-  {
-    title: 'Actors quantity',
-    cuantity: 49,
-    icon: true,
-    color: 'warning'
-  },
+  }
 ];
 
 const ContentRowMovies = () => {
